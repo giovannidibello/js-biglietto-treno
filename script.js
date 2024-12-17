@@ -19,6 +19,7 @@ console.log("Numero di Km: ", numeroKm, "Età: ", eta);
 
 // definizione prezzo base del biglietto
 let prezzoBase = numeroKm * 0.21;
+// definizione var
 let prezzoFinale;
 let sconto;
 
@@ -46,5 +47,5 @@ console.log("Sconto: ", sconto * 100, "%");
 
 // OUTPUT
 
-// restituisci il prezzo normale con massimo due decimali
-console.log("Prezzo finale: ", prezzoFinale, "€");
+// restituisci il prezzo finale con massimo due decimali
+console.log("Prezzo finale: ", prezzoFinale.toFixed(2), "€");
