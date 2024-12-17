@@ -48,4 +48,4 @@ console.log("Sconto: ", sconto * 100, "%");
 // OUTPUT
 
 // restituisci il prezzo finale con massimo due decimali
-console.log("Prezzo finale: ", prezzoFinale.toFixed(2), "€");
+console.log("Prezzo finale: ", parseFloat(prezzoFinale.toFixed(2)), "€");
