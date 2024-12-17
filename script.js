@@ -37,7 +37,7 @@ if (eta < 18) {
     // ALTRIMENTI
 } else {
     // applica il prezzo normale
-    sconto = 0
+    sconto = 0;
 }
 
 // calcolo prezzo finale
