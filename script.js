@@ -10,21 +10,41 @@
 let numeroKm = parseInt(prompt("Inserisci il numero di km che vuoi percorrere"));
 
 // chiede all'utente l'età del passeggero
-let eta = prompt("Inserisci l'età del passeggero");
+let eta = parseInt(prompt("Inserisci l'età del passeggero"));
 
-console.log("Numero di Km", numeroKm, "Età", eta);
+console.log("Numero di Km: ", numeroKm, "Età: ", eta);
 
 
 // ELABORAZIONE
 
 // definizione prezzo base del biglietto
+let prezzoBase = numeroKm * 0.21;
+let prezzoFinale;
+let sconto;
+
+console.log("Prezzo biglietto base: ", prezzoBase, "€");
+
+
 // SE l'utente è minorenne 
+if (eta < 18) {
     // applica uno sconto del 20%
-// SE l'utente è over 65
+    sconto = 0.20; 
+    // SE l'utente è over 65     
+} else if (eta > 65) {
     // applica uno sconto del 40%
-// ALTRIMENTI
+    sconto = 0.40; 
+    // ALTRIMENTI
+} else {
     // applica il prezzo normale
+    sconto = 0
+}
+
+// calcolo prezzo finale
+prezzoFinale = prezzoBase - (prezzoBase * sconto);  
+
+console.log("Sconto: ", sconto * 100, "%");    
 
 // OUTPUT
 
 // restituisci il prezzo normale con massimo due decimali
+console.log("Prezzo finale: ", prezzoFinale, "€");
