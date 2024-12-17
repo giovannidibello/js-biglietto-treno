@@ -7,7 +7,13 @@
 // INPUT
 
 // chiede all'utente il numero di chilometri che vuole percorrere
+let numeroKm = parseInt(prompt("Inserisci il numero di km che vuoi percorrere"));
+
 // chiede all'utente l'età del passeggero
+let eta = prompt("Inserisci l'età del passeggero");
+
+console.log("Numero di Km", numeroKm, "Età", eta);
+
 
 // ELABORAZIONE
 
