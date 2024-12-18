@@ -14,38 +14,31 @@ let eta = parseInt(prompt("Inserisci l'età del passeggero"));
 
 console.log("Numero di Km: ", numeroKm, "Età: ", eta);
 
-
 // ELABORAZIONE
 
 // definizione prezzo base del biglietto
-let prezzoBase = numeroKm * 0.21;
+let prezzo = numeroKm * 0.21;
+
 // definizione var
-let prezzoFinale;
-let sconto;
-
-console.log("Prezzo biglietto base: ", prezzoBase, "€");
-
+let messaggio;
 
 // SE l'utente è minorenne 
 if (eta < 18) {
     // applica uno sconto del 20%
-    sconto = 0.20; 
+    prezzo = prezzo * 0.80;  
+    messaggio = "Hai avuto uno sconto del 20%";
+
     // SE l'utente è over 65     
 } else if (eta > 65) {
     // applica uno sconto del 40%
-    sconto = 0.40; 
-    // ALTRIMENTI
-} else {
-    // applica il prezzo normale
-    sconto = 0;
-}
+    prezzo = prezzo * 0.60; 
+    messaggio = "Hai avuto uno sconto del 40%";     
+} 
 
-// calcolo prezzo finale
-prezzoFinale = prezzoBase - (prezzoBase * sconto);  
-
-console.log("Sconto: ", sconto * 100, "%");    
+messaggio = "Non hai diritto a nessun sconto";
 
 // OUTPUT
 
 // restituisci il prezzo finale con massimo due decimali
-console.log("Prezzo finale: ", parseFloat(prezzoFinale.toFixed(2)), "€");
+console.log(messaggio);
+console.log("Prezzo finale: ", parseFloat(prezzo.toFixed(2)), "€");
